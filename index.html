@@ -47,13 +47,13 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Farbschema */
-        .btn-bolus { border-left: 5px solid #9b59b6; } /* Lila jetzt an Pos 1 */
+        .btn-bolus { border-left: 5px solid #9b59b6; }
         .btn-basal { border-left: 5px solid #3498db; }
         .btn-hba1c { border-left: 5px solid #2ecc71; }
         .btn-wahlomat { border-left: 5px solid #f1c40f; }
         .btn-fpe { border-left: 5px solid #e74c3c; }
         .btn-sport { border-left: 5px solid #2980b9; }
+        .btn-extra { border-left: 5px solid #7f8c8d; }
 
         .nav-button:active { 
             transform: scale(0.97); 
@@ -148,11 +148,36 @@
                 <span class="btn-desc">Empfehlungen für AID & Pen-Nutzer</span>
             </div>
         </a>
+
+        <a href="#" onclick="checkPassword(event)" class="nav-button btn-extra">
+            <span class="icon">🔒</span>
+            <div class="btn-text">
+                <span class="btn-title">Extra Bereich</span>
+                <span class="btn-desc">Nur für autorisierte Nutzer</span>
+            </div>
+        </a>
     </div>
 
     <div class="footer">
-        Dashboard v1.7 | Privat-Projekt
+        Dashboard v1.8 | Privat-Projekt
     </div>
+
+<script>
+function checkPassword(event) {
+    event.preventDefault();
+    
+    const correctPassword = "2107";
+    const targetUrl = "https://patrick2305blume-eng.github.io/Website-/";
+
+    const passwordEntry = prompt("Bitte gib das Passwort für den Extra-Bereich ein:");
+    
+    if (passwordEntry === correctPassword) { 
+        window.location.href = targetUrl; 
+    } else if (passwordEntry !== null) {
+        alert("Falsches Passwort! Zugriff verweigert.");
+    }
+}
+</script>
 
 </body>
 </html>
