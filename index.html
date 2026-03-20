@@ -47,12 +47,13 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
+        /* Farbschema */
+        .btn-bolus { border-left: 5px solid #9b59b6; } /* Lila jetzt an Pos 1 */
         .btn-basal { border-left: 5px solid #3498db; }
         .btn-hba1c { border-left: 5px solid #2ecc71; }
         .btn-wahlomat { border-left: 5px solid #f1c40f; }
         .btn-fpe { border-left: 5px solid #e74c3c; }
         .btn-sport { border-left: 5px solid #2980b9; }
-        .btn-bolus { border-left: 5px solid #9b59b6; } /* Neue Farbe Lila für Bolus */
 
         .nav-button:active { 
             transform: scale(0.97); 
@@ -100,6 +101,14 @@
     <p>Deine persönlichen Therapie-Tools</p>
 
     <div class="grid">
+        <a href="https://patrick2305blume-eng.github.io/Bolus-Rechner-/" class="nav-button btn-bolus">
+            <span class="icon">💉</span>
+            <div class="btn-text">
+                <span class="btn-title">Bolus-Rechner</span>
+                <span class="btn-desc">Korrektur & Mahlzeit inkl. IOB-Check</span>
+            </div>
+        </a>
+
         <a href="https://patrick2305blume-eng.github.io/Basal-Rechner-/" class="nav-button btn-basal">
             <span class="icon">📊</span>
             <div class="btn-text">
@@ -139,19 +148,11 @@
                 <span class="btn-desc">Empfehlungen für AID & Pen-Nutzer</span>
             </div>
         </a>
-
-        <a href="https://patrick2305blume-eng.github.io/Bolus-Rechner-/" class="nav-button btn-bolus">
-            <span class="icon">💉</span>
-            <div class="btn-text">
-                <span class="btn-title">Bolus-Rechner</span>
-                <span class="btn-desc">Korrektur- & Mahlzeitenbolus ermitteln</span>
-            </div>
-        </a>
     </div>
 
     <div class="footer">
-        Dashboard v1.6 | Privat-Projekt<br>
-        </div>
+        Dashboard v1.7 | Privat-Projekt
+    </div>
 
 </body>
 </html>
