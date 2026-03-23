@@ -47,13 +47,14 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Farbschema */
+        /* Farbschema der linken Rahmen */
         .btn-bolus { border-left: 5px solid #9b59b6; }
         .btn-basal { border-left: 5px solid #3498db; }
-        .btn-keto { border-left: 5px solid #e67e22; } /* Warnfarbe für Ketoazidose */
+        .btn-keto { border-left: 5px solid #e74c3c; }
+        .btn-cortison { border-left: 5px solid #f39c12; } /* Orange für Cortison */
         .btn-hba1c { border-left: 5px solid #2ecc71; }
         .btn-wahlomat { border-left: 5px solid #f1c40f; }
-        .btn-fpe { border-left: 5px solid #e74c3c; }
+        .btn-fpe { border-left: 5px solid #e67e22; }
         .btn-sport { border-left: 5px solid #2980b9; }
         .btn-extra { border-left: 5px solid #7f8c8d; }
 
@@ -115,7 +116,7 @@
             <span class="icon">📊</span>
             <div class="btn-text">
                 <span class="btn-title">Basalraten Rechner</span>
-                <span class="btn-desc">Anpassung nach TDD (Tägliche Insulin Dosis)</span>
+                <span class="btn-desc">Anpassung nach TDD (Tägliche Dosis)</span>
             </div>
         </a>
 
@@ -127,11 +128,19 @@
             </div>
         </a>
 
+        <a href="https://patrick2305blume-eng.github.io/Cortison-Schema/" class="nav-button btn-cortison">
+            <span class="icon">💊</span>
+            <div class="btn-text">
+                <span class="btn-title">Cortison-Schema</span>
+                <span class="btn-desc">Anpassung nach Dr. Teupe (ICT & CSII)</span>
+            </div>
+        </a>
+
         <a href="https://patrick2305blume-eng.github.io/Hba1c-Rechner-/" class="nav-button btn-hba1c">
             <span class="icon">🔄</span>
             <div class="btn-text">
                 <span class="btn-title">HbA1c Rechner</span>
-                <span class="btn-desc">Umrechnung von HbA1c, mg/dl, mmol & GMI</span>
+                <span class="btn-desc">Umrechnung & GMI Schätzung</span>
             </div>
         </a>
 
@@ -169,16 +178,14 @@
     </div>
 
     <div class="footer">
-        Dashboard v1.9 | Privat-Projekt
+        Dashboard v2.1 | Privat-Projekt
     </div>
 
 <script>
 function checkPassword(event) {
     event.preventDefault();
-    
     const correctPassword = "2107";
     const targetUrl = "https://patrick2305blume-eng.github.io/Website-/";
-
     const passwordEntry = prompt("Bitte gib das Passwort für den Extra-Bereich ein:");
     
     if (passwordEntry === correctPassword) { 
